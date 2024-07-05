@@ -14,7 +14,7 @@ import java.sql.Statement;
  * @author DarkHard
  */
 public class kuliner {
-    private String databasename = "muhammad_maulana_sidiq_2210010175";
+    private String databasename = "2210010175";
     private String username     = "root";
     private String password     = "";
     public static Connection connectionDB;
@@ -50,8 +50,8 @@ public class kuliner {
         try {
             String sql = "update kategori_kuliner set nama_kategori = ? where id_kategori = ?";
             PreparedStatement perintah = connectionDB.prepareStatement(sql);
-            perintah.setString(1, id_kategori);
-            perintah.setString(2, nama_kategori);
+            perintah.setString(1, nama_kategori);
+            perintah.setString(2, id_kategori);
             
             perintah.executeUpdate();
             System.out.println("updated");
@@ -74,7 +74,7 @@ public class kuliner {
         catch (Exception e){
              System.out.println("updated");
         }
-    }
+    } 
     
     public void carikategori_kuliner(String id_kategori){
         try {

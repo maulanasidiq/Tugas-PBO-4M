@@ -14,7 +14,7 @@ import java.sql.Statement;
  * @author DarkHard
  */
 public class penginapan {
-    private String databasename = "muhammad_maulana_sidiq_2210010175";
+    private String databasename = "2210010175";
     private String username     = "root";
     private String password     = "";
     public static Connection connectionDB;
@@ -50,8 +50,8 @@ public class penginapan {
         try {
             String sql = "update kategori_penginapan set nama_kategori = ? where id_kategori = ?";
             PreparedStatement perintah = connectionDB.prepareStatement(sql);
-            perintah.setString(1, id_kategori);
-            perintah.setString(2, nama_kategori);
+            perintah.setString(1, nama_kategori);
+            perintah.setString(2, id_kategori);
             
             perintah.executeUpdate();
             System.out.println("updated");

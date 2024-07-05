@@ -13,7 +13,7 @@ import java.sql.Statement;
  * @author DarkHard
  */
 public class daerah_kuliner {
-    private String databasename = "muhammad_maulana_sidiq_2210010175";
+    private String databasename = "2210010175";
     private String username     = "root";
     private String password     = "";
     public static Connection connectionDB;
@@ -49,8 +49,8 @@ public class daerah_kuliner {
         try {
             String sql = "update daerah_kuliner set nama_daerah = ? where id_daerah = ?";
             PreparedStatement perintah = connectionDB.prepareStatement(sql);
-            perintah.setString(1, id_daerah);
-            perintah.setString(2, nama_daerah);
+            perintah.setString(1, nama_daerah);
+            perintah.setString(2, id_daerah);
             
             perintah.executeUpdate();
             System.out.println("updated");

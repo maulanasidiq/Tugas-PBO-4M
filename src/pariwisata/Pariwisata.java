@@ -10,6 +10,8 @@ import crud.kuliner;
 import crud.penginapan;
 import crud.wisata;
 import crud.daerah_kuliner;
+import gui.FrameUtama;
+
 
 /**
  *
@@ -21,6 +23,7 @@ public class Pariwisata {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        new FrameUtama().setVisible(true);
         //daerah_kuliner dbconnect = new daerah_kuliner();
         //dbconnect.tambahdaerah_kuliner("1", "banjarmasin");
         //wisata dbconnect = new wisata();
@@ -39,6 +42,6 @@ public class Pariwisata {
         //dbconnect.tambahuji("1", "Sidiq", "087755998811", "jl.Hksn");
 //         gambarkuliner gambarkuliner1 = new gambarkuliner(1, 101, "Sate Ayam", "Sate ayam dengan bumbu kacang khas", "sate.jpg", 110.412, -7.797, "sate1.jpg", "sate2.jpg", "sate3.jpg", "sate4.jpg");
 //
-//        System.out.println(gambarkuliner1.toString());
+//        System.out.println(gambarkuliner1.toString());    
     }
 }
